@@ -28,3 +28,4 @@ The third symbol "Т" - in the block number K = 4*(2-1) + 3 = 7. And so on until
 
 ![enter image description here](https://lh3.googleusercontent.com/ss6KjuZLXbh2REH_LIt28CQT7ysRMroqgJlVY4wNd-o=s0 "Blocks.png")
 
+Thus, the clear text is replaced with eight blocks which length in the sum will give length of a source text.
