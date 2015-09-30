@@ -18,7 +18,11 @@ Now, if we denote r(i) value i position to the key string, across s(j) value j p
 
 ***K = n (r(i) - 1) + s(j)***
 
-According to the set rule, the first symbol of the text "М" written in block number K = 4*(2-1) + 4 = 8. Next symbol "Е" falls into block number K = 4*(2-1) + 1 = 5. The third symbol "Т" - in the block number K = 4*(2-1) + 3 = 7. And so on until the end of the text.
+According to the set rule, the first symbol of the text "М" written in block number K = 4*(2-1) + 4 = 8.
+
+Next symbol "Е" falls into block number K = 4*(2-1) + 1 = 5. 
+
+The third symbol "Т" - in the block number K = 4*(2-1) + 3 = 7. And so on until the end of the text.
 
 **Formed blocks will have the following content:**
 
