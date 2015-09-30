@@ -1,5 +1,7 @@
  **Method of dissection - diversity data**
 ___
+**in this program only coding is made how to decode, I will describe below!**
+
 At once I apologize for this translation, knowledge of English to me weak :(
 
 ---
@@ -18,6 +20,14 @@ Now, if we denote r(i) value i position to the key string, across s(j) value j p
 
 ***K = n (r(i) - 1) + s(j)***
 
+**K - number of blocks**
+
+**n - number of columns**
+
+**r(i) - key of a line ({2,1})**
+
+**s(j) - key of a column ({4,1,3,2})**
+
 According to the set rule, the first symbol of the text "М" written in block number K = 4*(2-1) + 4 = 8.
 
 Next symbol "Е" falls into block number K = 4*(2-1) + 1 = 5. 
@@ -29,3 +39,39 @@ The third symbol "Т" - in the block number K = 4*(2-1) + 3 = 7. And so on until
 ![enter image description here](https://lh3.googleusercontent.com/ss6KjuZLXbh2REH_LIt28CQT7ysRMroqgJlVY4wNd-o=s0 "Blocks.png")
 
 Thus, the clear text is replaced with eight blocks which length in the sum will give length of a source text.
+
+#**Decode**
+For decoding it is necessary to use "arrayKeys" from the file with a code. 
+
+![enter image description here](https://lh3.googleusercontent.com/rat9INaLXPZiw3QR6_j7z0R3dad5W2UvGBCuE0golFk=s0 "IMG_20151001_001431.jpg")
+
+Restoration of a source text is calculated on a formula:
+
+
+***K = n (r(i) - 1) + s(j)***
+
+Number of the block is calculated, from which the regular symbol is taken.
+
+For example, for "M":
+
+![enter image description here](https://lh3.googleusercontent.com/K8CAQbrOg54x22cEk0-clmdRUAs0UUjOiHV4996PkNI=s0 "IMG_20151001_001446.jpg")
+that is M is in the block 8.
+
+And for "E" complaining after it
+
+![enter image description here](https://lh3.googleusercontent.com/zfe-Yryvme_wEEjkxmkoi1D9_AVqoyeKmeFSxkulXKg=s0 "IMG_20151001_001450.jpg")
+that is E is in the block 5.
+
+that is we pass according to all numbers of blocks and numbers of lines as it should be which was set by means of a random (column 4 and row 2; next column 1 and row 2; next column 3 and row 2; next column 2 and row 2; next column 4 and row 1 and so on, won't end a string yet).
+
+In my code for obtaining value in the block, for example, it is possible to create a string variable and in it to write down values from the necessary block, and further to take the symbol, necessary on the account. 
+
+**Code example in a rigid look:**
+
+string temp = Convert.ToString(DictionaryBlockValue[necessaryBlock]);
+DecodeString+= temp[necessaryLetter]
+
+I won't describe full algorithm.
+
+
+***Thanks for attention :) also I apologize for such translation and that didn't do decoding :(***
