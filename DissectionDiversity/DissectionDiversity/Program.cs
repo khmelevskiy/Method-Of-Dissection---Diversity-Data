@@ -49,7 +49,7 @@ namespace DissectionDiversity
         //filling of the massif = to values of lines and columns
         //and
         //output table key-value
-        public void SetKeysAndPrint(ref string[][] arr)
+        public void SetKeysAndPrint()
         {
             int row = keyRow[0], column = 0, counterLengthString = 0, valueForKeysRows = keyRow[0], counterForPrint = -1, counterKeyRowInTable = -1;
 
@@ -210,7 +210,7 @@ namespace DissectionDiversity
                     column = keyColumn[j] - 1;
                     if (counterLengthString == theInputString.Length)
                         break;
-                    arr[row][column] += Convert.ToString(theInputString[counterLengthString++]);
+                    arrayKeys[row][column] += Convert.ToString(theInputString[counterLengthString++]);
                     //end filling of the massif of keys
 
                     //The output of the input string in the table
@@ -310,7 +310,7 @@ namespace DissectionDiversity
             sw.WriteLine("the number of columns = {0}", theNumberOfColumns);
             sw.WriteLine("the input string:{0}\n\n\n", theInputString);
 
-            SetKeysAndPrint(ref arrayKeys);
+            SetKeysAndPrint();
             FormingBlocks();
             return false;
         }
