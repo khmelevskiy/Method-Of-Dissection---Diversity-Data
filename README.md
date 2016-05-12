@@ -1,4 +1,3 @@
-???
  **Method of dissection - diversity data**
 ___
 **in this program only coding is made how to decode, I will describe below!**
